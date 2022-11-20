@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_puthexa_min.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jralph <jralph@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/18 23:14:40 by jose              #+#    #+#             */
-/*   Updated: 2022/11/20 22:56:03 by jralph           ###   ########.fr       */
+/*   Created: 2022/11/20 22:56:56 by jralph            #+#    #+#             */
+/*   Updated: 2022/11/20 23:59:21 by jralph           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#include "libftprintf.h"
 
-# include <stdarg.h>
-# include <unistd.h>
-# include <limits.h>
+int	ft_puthexa_min(unsigned int nbr)
+{
+	char	*hexa;
 
-int		ft_putchar(char c);
-int		ft_putstr(char *s);
-int		ft_printf(const char *str, ...);
-void	ft_goodc(va_list args, char c, int *cmp);
-int		ft_putptr(void *p);
-int		ft_putnbr(int nbr);
-int		ft_putnbru(unsigned int nbr);
-int		ft_puthexa_min(va_arg(args, unsigned int nbr));
-
-#endif
+	hexa = "0123456789abcdef";
+	if (nbr > 15)
+		return (ft_putnbru(nbr / 16) + ft_putnbru(nbr % 16));
+	c = nbr + '0';
+	write (1, &hexa[nbr], 1);
+	return (1);
+}
