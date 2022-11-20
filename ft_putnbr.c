@@ -14,8 +14,21 @@
 
 int	ft_putnbr(int nbr)
 {
-	long		nb;
-	static int	
-	nb = nbr;
-	if ()
+	char	c;
+
+	if (nbr < 0)
+	{
+		if (nbr == INT_MIN)
+		{
+			write(1, "-2147483648", 11);
+			return (11);
+		}
+		write(1, "-", 1);
+		nbr = -nbr;
+	}
+	if (nbr > 9)
+		return (ft_putnbr(nbr / 10) + ft_putnbr(nbr % 10));
+	c += nbr + '0';
+	write (1, &c, 1);
+	return (1);
 }

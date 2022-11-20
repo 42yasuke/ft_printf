@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbru.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jose <jose@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jralph <jralph@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/19 10:58:51 by jose              #+#    #+#             */
-/*   Updated: 2022/11/20 16:37:31 by jose             ###   ########.fr       */
+/*   Created: 2022/11/20 21:16:33 by jralph            #+#    #+#             */
+/*   Updated: 2022/11/20 21:20:16 by jralph           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include <libftprintf.h>
 
-int	ft_putstr(char *s)
+int	ft_putnbru(unsigned int nbr)
 {
-	int	i;
+	char	c;
 
-	i = 0;
-	while (s[i])
-	{
-		ft_putchar(s[i]);
-		i++;
-	}
-	return (i);
+	if (nbr > 9)
+		return (ft_putnbru(nbr / 10) + ft_putnbru(nbr % 10));
+	c = nbr + '0';
+	write (1, &c, 1);
+	return (1);
 }

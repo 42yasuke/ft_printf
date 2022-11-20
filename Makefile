@@ -17,7 +17,8 @@ SRC =	ft_printf.c \
 		ft_putstr.c \
 		ft_goodc.c \
 		ft_putptr.c \
-		ft_putnbr.c
+		ft_putnbr.c \
+		ft_putnbru.c
 
 OBJ = $(SRC:.c=.o)
 

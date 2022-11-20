@@ -20,12 +20,11 @@ void	ft_goodc(va_list args, char c, int *cmp)
 		*cmp += ft_putstr(va_arg(args, char *));
 	else if (c == 'p')
 		*cmp += ft_putptr(va_arg(args, void *));
-	else if (c == 'd')
+	else if (c == 'd' || c == 'i')
 		*cmp += ft_putnbr(va_arg(args, int));
-	/*else if (c == 'i')
-		*cmp += ft_putchar(va_arg(args, char));
 	else if (c == 'u')
-		*cmp += ft_putchar(va_arg(args, char));
+		*cmp += ft_putnbru(va_arg(args, unsigned int));
+	/*
 	else if (c == 'x')
 		*cmp += ft_putchar(va_arg(args, char));
 	else if (c == 'X')
