@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jose <jose@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/19 10:58:51 by jose              #+#    #+#             */
-/*   Updated: 2022/11/20 16:37:31 by jose             ###   ########.fr       */
+/*   Created: 2022/11/20 02:37:35 by jose              #+#    #+#             */
+/*   Updated: 2022/11/20 16:41:22 by jose             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_putstr(char *s)
+int	ft_putptr(void *p)
 {
-	int	i;
+	char	*hexa;
+	long	pn;
+	static int	is_done;
 
-	i = 0;
-	while (s[i])
+	hexa = "0123456789abcdef";
+	pn = (long)p;
+	if(!is_done)
 	{
-		ft_putchar(s[i]);
-		i++;
+		write(1, "0x", 2);
+		is_done++;
 	}
-	return (i);
+	if (pn > 15)
+		return (ft_puthexa_min(pn / 16) + ft_puthexa_min(pn % 16));
+	write (1, &hexa[pn], 1);
+	return (1);
 }

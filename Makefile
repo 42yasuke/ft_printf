@@ -6,7 +6,7 @@
 #    By: jose <jose@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/18 17:23:44 by jose              #+#    #+#              #
-#    Updated: 2022/11/19 11:15:51 by jose             ###   ########.fr        #
+#    Updated: 2022/11/20 16:42:46 by jose             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,9 @@ NAME = libftprintf.a
 SRC =	ft_printf.c \
 		ft_putchar.c \
 		ft_putstr.c \
-		ft_goodc.c
+		ft_goodc.c \
+		ft_putptr.c \
+		ft_putnbr.c
 
 OBJ = $(SRC:.c=.o)
 

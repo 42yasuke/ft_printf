@@ -6,7 +6,7 @@
 /*   By: jose <jose@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 10:27:23 by jose              #+#    #+#             */
-/*   Updated: 2022/11/20 15:13:20 by jose             ###   ########.fr       */
+/*   Updated: 2022/11/20 16:41:06 by jose             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_goodc(va_list args, char c, int *cmp)
 	else if (c == 'p')
 		*cmp += ft_putptr(va_arg(args, void *));
 	else if (c == 'd')
-		*cmp += ft_putchar(va_arg(args, int));
+		*cmp += ft_putnbr(va_arg(args, int));
 	/*else if (c == 'i')
 		*cmp += ft_putchar(va_arg(args, char));
 	else if (c == 'u')
