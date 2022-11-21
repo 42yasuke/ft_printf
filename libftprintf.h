@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libftprintf.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jralph <jralph@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jose <jose@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 23:14:40 by jose              #+#    #+#             */
-/*   Updated: 2022/11/20 22:56:03 by jralph           ###   ########.fr       */
+/*   Updated: 2022/11/21 01:42:21 by jose             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	ft_goodc(va_list args, char c, int *cmp);
 int		ft_putptr(void *p);
 int		ft_putnbr(int nbr);
 int		ft_putnbru(unsigned int nbr);
-int		ft_puthexa_min(va_arg(args, unsigned int nbr));
+int		ft_puthexa_min(unsigned int nbr);
+int		ft_puthexa_maj(unsigned int nbr);
 
 #endif

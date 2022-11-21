@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_goodc.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jralph <jralph@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jose <jose@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 10:27:23 by jose              #+#    #+#             */
-/*   Updated: 2022/11/20 23:47:20 by jralph           ###   ########.fr       */
+/*   Updated: 2022/11/21 01:44:34 by jose             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.a"
+#include "libftprintf.h"
 
 void	ft_goodc(va_list args, char c, int *cmp)
 {
 	if (c == 'c')
-		*cmp += ft_putchar(va_arg(args, char));
+		*cmp += ft_putchar((char)va_arg(args, int));
 	else if (c == 's')
 		*cmp += ft_putstr(va_arg(args, char *));
 	else if (c == 'p')

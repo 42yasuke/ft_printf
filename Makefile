@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jralph <jralph@student.42.fr>              +#+  +:+       +#+         #
+#    By: jose <jose@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/18 17:23:44 by jose              #+#    #+#              #
-#    Updated: 2022/11/20 21:24:18 by jralph           ###   ########.fr        #
+#    Updated: 2022/11/21 09:13:31 by jose             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ SRC =	ft_printf.c \
 		ft_putptr.c \
 		ft_putnbr.c \
 		ft_putnbru.c \
-		ft_puthexa_min.c
+		ft_puthexa_min.c \
+		ft_puthexa_maj.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -35,7 +36,7 @@ RM = rm -f
 
 all : $(NAME)
 
-%.o : %.c 
+%.o : %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME) : $(OBJ)
@@ -51,6 +52,8 @@ re : fclean all
 
 prog : main.c all
 	$(CC) $(CFLAGS) $< -o $@ -L. -lftprintf
+	clear
 
 fprog : fclean
 	$(RM) prog
+	clear

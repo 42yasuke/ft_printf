@@ -6,7 +6,7 @@
 /*   By: jose <jose@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 10:41:13 by jose              #+#    #+#             */
-/*   Updated: 2022/11/20 16:38:09 by jose             ###   ########.fr       */
+/*   Updated: 2022/11/21 09:15:32 by jose             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	main (void)
 {
 	const char	*str;
 
-	str = "l'\n";
-	ft_printf(str);
+	str = "Ceci est un test pour ft_printf %d\n";
+	ft_printf(str, 3);
 	return (0);
 }
