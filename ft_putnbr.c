@@ -6,13 +6,13 @@
 /*   By: jralph <jralph@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 16:44:03 by jose              #+#    #+#             */
-/*   Updated: 2022/11/22 10:10:24 by jralph           ###   ########.fr       */
+/*   Updated: 2022/11/22 12:15:28 by jralph           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putnbr(int nbr, int  *cmp)
+void	ft_putnbr(int nbr, int *cmp)
 {
 	char	*dec;
 	long	nb;
