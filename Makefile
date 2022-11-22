@@ -49,11 +49,3 @@ fclean : clean
 	$(RM) $(NAME)
 
 re : fclean all
-
-prog : main.c all
-	$(CC) $(CFLAGS) $< -o $@ -L. -lftprintf
-	clear
-	./prog
-fprog : fclean
-	$(RM) prog
-	clear
