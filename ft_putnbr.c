@@ -3,32 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jose <jose@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jralph <jralph@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 16:44:03 by jose              #+#    #+#             */
-/*   Updated: 2022/11/20 17:01:12 by jose             ###   ########.fr       */
+/*   Updated: 2022/11/22 10:10:24 by jralph           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
-int	ft_putnbr(int nbr)
+void	ft_putnbr(int nbr, int  *cmp)
 {
-	char	c;
+	char	*dec;
+	long	nb;
 
-	if (nbr < 0)
+	nb = (long)nbr;
+	dec = "0123456789";
+	if (nb < 0)
 	{
-		if (nbr == INT_MIN)
-		{
-			write(1, "-2147483648", 11);
-			return (11);
-		}
 		write(1, "-", 1);
-		nbr = -nbr;
+		nb = -nb;
+		*cmp = *cmp + 1;
 	}
-	if (nbr > 9)
-		return (ft_putnbr(nbr / 10) + ft_putnbr(nbr % 10));
-	c += nbr + '0';
-	write (1, &c, 1);
-	return (1);
+	if (nb > 9)
+	{
+		ft_putnbr(nb / 10, cmp);
+		ft_putnbr(nb % 10, cmp);
+	}
+	else
+	{	
+		write (1, &dec[nb], 1);
+		*cmp = *cmp + 1;
+	}
 }

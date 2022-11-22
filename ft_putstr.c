@@ -3,24 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jose <jose@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jralph <jralph@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 10:58:51 by jose              #+#    #+#             */
-/*   Updated: 2022/11/20 16:37:31 by jose             ###   ########.fr       */
+/*   Updated: 2022/11/22 10:10:37 by jralph           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putstr(char *s)
 {
 	int	i;
 
 	i = 0;
-	while (s[i])
+	if (s)
 	{
-		ft_putchar(s[i]);
-		i++;
+		while (s[i])
+		{
+			ft_putchar(s[i]);
+			i++;
+		}
+		return (i);
 	}
-	return (i);
+	return (ft_putstr("(null)"));
 }

@@ -12,6 +12,8 @@
 
 #ifndef MAIN_H
 # define MAIN_H
-# include "libftprintf.h"
+# include "ft_printf.h"
+# include <stdio.h>
+# include <limits.h>
 
 #endif

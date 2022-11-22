@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jose <jose@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jralph <jralph@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 23:14:40 by jose              #+#    #+#             */
-/*   Updated: 2022/11/21 01:42:21 by jose             ###   ########.fr       */
+/*   Updated: 2022/11/22 10:10:08 by jralph           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@
 int		ft_putchar(char c);
 int		ft_putstr(char *s);
 int		ft_printf(const char *str, ...);
-void	ft_goodc(va_list args, char c, int *cmp);
-int		ft_putptr(void *p);
-int		ft_putnbr(int nbr);
+void		ft_goodc(va_list args, char c, int *cmp);
+int		ft_putptr(void *p, int val_is_d);
+void		ft_putnbr(int nbr, int *cmp);
 int		ft_putnbru(unsigned int nbr);
 int		ft_puthexa_min(unsigned int nbr);
 int		ft_puthexa_maj(unsigned int nbr);

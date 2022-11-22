@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jose <jose@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jralph <jralph@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 10:41:13 by jose              #+#    #+#             */
-/*   Updated: 2022/11/21 09:15:32 by jose             ###   ########.fr       */
+/*   Updated: 2022/11/22 10:10:42 by jralph           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	main (void)
 {
-	const char	*str;
 
-	str = "Ceci est un test pour ft_printf %d\n";
-	ft_printf(str, 3);
+	printf("printf = %d\n", (printf(" %i ", 11)));
+	printf("ft_printf = %d\n", (ft_printf(" %i ", 11)));
+	
 	return (0);
 }
