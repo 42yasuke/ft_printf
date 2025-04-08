@@ -6,8 +6,6 @@
 
 L'objectif de ce projet est de recréer une version simplifiée de la fonction `printf` de la bibliothèque standard en C. Cela permet de mieux comprendre la gestion des chaînes de formatage, les différents types de données et la gestion de la mémoire dans un contexte fonctionnel.
 
----
-
 ## 🧩 Fonctionnalités Implémentées
 
 - La fonction `ft_printf` gère plusieurs spécificateurs de format, comme :
@@ -17,8 +15,6 @@ L'objectif de ce projet est de recréer une version simplifiée de la fonction `
   - `%x`, `%X` pour afficher des entiers en hexadécimal (minuscule et majuscule)
   - `%u` pour afficher un entier non signé
   - `%p` pour afficher une adresse mémoire
-
----
 
 ## 🧪 Compilation et Utilisation
 
@@ -61,5 +57,3 @@ int main()
     return 0;
 }
 ```
-
----
